@@ -3,7 +3,7 @@ import "./App.css";
 function App() {
   return (
     <div>
-      <p>Video Streaming Platform</p>
+      <p className="text-3xl font-bold underline">Video Streaming Platform</p>
     </div>
   );
 }
