@@ -9,31 +9,27 @@ const Header = () => {
     setIsSideMenu(!isSideMenu);
   };
 
-  const closeSideMenu = () => {
-    setIsSideMenu(false);
-  };
   return (
     <header className="flex flex-col justify-center items-center w-full">
       <div className="flex flex-col justify-center items-center w-full shadow-sm">
-      <nav className="container px-4 lg:px-10 py-4 flex  justify-between items-center">
-        <div class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-l from-pink-600 to-pink-900">
-          Dreel
-        </div>
-        <div>
-          <div className="hidden lg:block">
-            <AuthNav />
+        <nav className="container px-4 lg:px-10 py-4 flex  justify-between items-center">
+          <div class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-l from-pink-600 to-pink-900">
+            Dreel
           </div>
-          <div
-            className="lg:hidden text-3xl cursor-pointer"
-            onClick={toggleSideMenu}
-          >
-            {isSideMenu ? <IoMenu /> : <IoClose />}
+          <div>
+            <div className="hidden lg:block">
+              <AuthNav />
+            </div>
+            <div
+              className="lg:hidden text-3xl cursor-pointer"
+              onClick={toggleSideMenu}
+            >
+              {isSideMenu ? <IoClose /> : <IoMenu />}
+            </div>
           </div>
-        </div>
-      </nav>
-
+        </nav>
       </div>
-      {!isSideMenu && (
+      {isSideMenu && (
         <div className="relative lg:hidden flex justify-center items-start mt-4 pt-16 h-screen w-full">
           <AuthNav />
         </div>
