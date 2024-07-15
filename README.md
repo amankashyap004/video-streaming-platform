@@ -6,6 +6,16 @@ A video streaming platform built with React, React Router, and React Icons. This
 
 Check out the live demo of the project [**Here**](https://video-streaming-platform-six.vercel.app/).
 
+## Screenshots
+
+### Landing Page
+
+![Landing Page](./public/assets/image-4.png)
+
+### Custom Video Player
+
+![Custom Video Player](./public/assets/image-5.png)
+
 ## Features
 
 - AI-enhanced video features
