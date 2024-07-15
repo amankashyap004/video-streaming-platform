@@ -3,7 +3,7 @@ input[type="range"][orient="vertical"] {
   direction: rtl;
   appearance: slider-vertical;
   width: 16px;
-  height: 50%;
+  height: 40%;
   vertical-align: bottom;
 }
 

@@ -130,7 +130,7 @@ const Controls = ({
           {isFullScreen ? "Full Screen" : "Full Screen"}
         </button>
       </div>
-      <div className="absolute bottom-20 lg:bottom-0 right-2 lg:right-4">
+      <div className="absolute bottom-4 lg:bottom-0 right-2 lg:right-4">
         <input
           type="range"
           min="0"
