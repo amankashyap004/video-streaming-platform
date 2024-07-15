@@ -19,7 +19,11 @@ const FeaturesSection = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="feature-card p-6 lg:p-8 shadow-lg rounded-lg border border-black bg-gradient-to-t from-[#FACBEA] to-[#F79BD3] hover:from-[#F79BD3] hover:to-[#FACBEA]"
+              className={`feature-card p-6 lg:p-8 shadow-lg rounded-lg border border-black bg-gradient-to-t ${
+                index === 1 || index === 4
+                  ? "from-[#FACBEA] to-[#F79BD3] hover:from-[#F79BD3] hover:to-[#FACBEA]"
+                  : "from-[#F79BD3] to-[#FACBEA] hover:from-[#FACBEA] hover:to-[#F79BD3]"
+              }`}
             >
               <h3 className="text-lg lg:text-2xl font-bold mb-2 lg:mb-4">
                 {feature.title}

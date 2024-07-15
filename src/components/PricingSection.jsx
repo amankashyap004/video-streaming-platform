@@ -58,7 +58,11 @@ const PricingSection = () => {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className="pricing-card p-6 lg:p-12 shadow-lg rounded-lg border border-black bg-gradient-to-t from-[#F79BD3] to-[#FACBEA] hover:from-[#FACBEA] hover:to-[#F79BD3]"
+              className={`p-6 lg:p-12 shadow-lg rounded-lg border border-black bg-gradient-to-t ${
+                index === 1
+                  ? "from-[#FACBEA] to-[#F79BD3] hover:from-[#F79BD3] hover:to-[#FACBEA]"
+                  : "from-[#F79BD3] to-[#FACBEA] hover:from-[#FACBEA] hover:to-[#F79BD3]"
+              }`}
             >
               <h3 className="text-2xl font-bold mb-1 lg:mb-4">{plan.name}</h3>
               <p className="text-xl font-semibold mb-1 lg:mb-4">{plan.price}</p>

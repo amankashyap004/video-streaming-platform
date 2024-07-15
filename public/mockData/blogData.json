@@ -1,0 +1,44 @@
+[
+  {
+      "slug": "welcome-to-dreelco",
+      "title": "Welcome to Dreel.Co",
+      "date": "16-July-2024",
+      "image": "./assets/image-1.jpg",
+      "dissertation": "Empower your creativity with AI-powered video streaming. Create viral reels in minutes with dynamic AI-enhanced features and seamless multi-device support.",
+      "content": [
+          "Dreel.Co is revolutionizing the way you create and share videos. With our platform, you can take your creativity to the next level by leveraging cutting-edge AI technology. Whether you're a seasoned content creator or just getting started, Dreel.Co provides the tools you need to produce stunning videos effortlessly.",
+          "Our AI-powered features include automatic video editing, intelligent scene detection, and real-time effects that make your videos look professional with minimal effort. Imagine creating a viral reel in just a few minutes, thanks to our advanced algorithms that optimize your footage.",
+          "In addition to AI enhancements, Dreel.Co offers seamless multi-device support. This means you can start editing a video on your phone, continue on your tablet, and finish on your computer without missing a beat. Our platform ensures a consistent and smooth experience across all your devices.",
+          "We're excited to have you join our community of creators. At Dreel.Co, we're committed to helping you unlock your full creative potential. Get ready to transform your videos into captivating stories that engage and inspire your audience.",
+          "Stay tuned for more updates and features as we continue to innovate and improve our platform. Thank you for choosing Dreel.Co as your go-to video creation tool."
+      ]
+  },
+  {
+      "slug": "ai-enhanced-video-features",
+      "title": "AI-Enhanced Video Features",
+      "date": "16-July-2024",
+      "image": "./assets/image-2.png",
+      "dissertation": "Discover the power of AI-enhanced video features to make your videos stand out. From automatic editing to real-time effects, our tools make video creation easier than ever.",
+      "content": [
+          "Creating standout videos has never been easier with Dreel.Co's AI-enhanced features. Our platform leverages artificial intelligence to simplify the video creation process, allowing you to focus on your creativity.",
+          "One of our most powerful features is automatic video editing. With just a few clicks, our AI can trim, cut, and arrange your footage to create a polished final product. This saves you time and ensures your videos are always high-quality.",
+          "Real-time effects are another game-changer. Whether you're adding filters, transitions, or special effects, our AI applies them instantly, so you can see how they enhance your video as you work. This immediate feedback helps you make better creative decisions.",
+          "In addition to editing and effects, our AI also assists with scene detection. This feature automatically identifies key moments in your footage, making it easy to highlight important scenes or create dynamic montages.",
+          "With Dreel.Co, you don't need to be a professional editor to produce professional-quality videos. Our AI-enhanced tools are designed to be user-friendly and accessible, so anyone can create engaging and visually stunning content."
+      ]
+  },
+  {
+      "slug": "seamless-multi-device-support",
+      "title": "Seamless Multi-Device Support",
+      "date": "16-July-2024",
+      "image": "./assets/image-3.jpg",
+      "dissertation": "Enjoy seamless multi-device support that lets you create, edit, and share videos across all your devices. Whether you're on a phone, tablet, or computer, Dreel.Co has you covered.",
+      "content": [
+          "Dreel.Co offers unparalleled multi-device support, making it easier than ever to create and edit videos no matter where you are. Our platform is designed to work seamlessly across all your devices, so you can start a project on one device and finish it on another without any hassle.",
+          "Whether you're using a phone, tablet, or computer, Dreel.Co provides a consistent and intuitive experience. Our responsive design ensures that all the features and tools you need are always at your fingertips, regardless of the screen size.",
+          "This flexibility is especially useful for creators on the go. You can capture footage on your phone, make quick edits on your tablet during a commute, and finalize your video on your computer when you get home. Dreel.Co keeps your workflow smooth and efficient.",
+          "Our cloud-based system also ensures that your projects are always up to date. Any changes you make on one device are instantly reflected across all your devices, so you never have to worry about losing progress or working with outdated versions.",
+          "With Dreel.Co's multi-device support, you have the freedom to create amazing videos whenever and wherever inspiration strikes. We're committed to providing the best tools and technology to help you bring your vision to life."
+      ]
+  }
+]

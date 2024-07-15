@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const socialLinks = [
@@ -18,15 +19,15 @@ const Footer = () => {
               &copy; {new Date().getFullYear()} Dreel.Co | All rights reserved
             </p>
             <div className="flex justify-start items-center gap-2 text-sm lg:text-base">
-              <a href="/terms" className="hover:underline">
+              <Link to={`/`} className="hover:underline">
                 Terms of Service
-              </a>
-              <a href="/privacy" className="hover:underline">
+              </Link>
+              <Link to={`/`} className="hover:underline">
                 Privacy Policy
-              </a>
-              <a href="/blog" className="hover:underline">
+              </Link>
+              <Link to={`/blog`} className="hover:underline">
                 Blog
-              </a>
+              </Link>
             </div>
           </div>
           <div className="flex justify-center lg:justify-end space-x-4">
