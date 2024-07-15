@@ -84,7 +84,7 @@ const FeaturePost = ({ data }) => {
               <p className="line-clamp-1 lg:line-clamp-2">{data?.content[0]}</p>
             </div>
             <div className="flex justify-start items-center w-full">
-              <button className="bg-gradient-to-l from-pink-600 to-pink-900 rounded-full px-6 py-2 text-white font-semibold">
+              <button className="bg-gradient-to-l from-pink-600 to-pink-900 hover:from-pink-900 hover:to-pink-600 rounded-full px-6 py-2 text-white font-semibold">
                 Read More
               </button>
             </div>

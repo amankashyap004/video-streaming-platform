@@ -112,12 +112,12 @@ const Controls = ({
       <div className="relative flex justify-center items-center gap-2 lg:gap-4 w-full">
         <button
           onClick={onPlayPause}
-          className="bg-gradient-to-l from-pink-600 to-pink-900 rounded-full px-6 py-2 lg:min-w-28 text-xs lg:text-base text-white font-semibold"
+          className="bg-gradient-to-l from-pink-600 to-pink-900 hover:from-pink-900 hover:to-pink-600 rounded-full px-6 py-2 lg:min-w-28 text-xs lg:text-base text-white font-semibold"
         >
           {isPlaying ? "Pause" : "Play"}
         </button>
 
-        <div className="flex justify-center items-center gap-2 bg-gradient-to-l from-pink-600 to-pink-900 rounded-full px-4 py-2 lg:min-w-28 text-xs lg:text-base text-white ">
+        <div className="flex justify-center items-center gap-2 bg-gradient-to-l from-pink-600 to-pink-900 hover:from-pink-900 hover:to-pink-600 rounded-full px-4 py-2 lg:min-w-28 text-xs lg:text-base text-white ">
           <span>{formatTime(currentTime)}</span>
           <span>/</span>
           <span>{formatTime(duration)}</span>
@@ -125,7 +125,7 @@ const Controls = ({
 
         <button
           onClick={onFullScreenToggle}
-          className="bg-gradient-to-l from-pink-600 to-pink-900 rounded-full px-4 py-2 lg:min-w-28 text-xs lg:text-base text-white font-semibold"
+          className="bg-gradient-to-l from-pink-600 to-pink-900 hover:from-pink-900 hover:to-pink-600 rounded-full px-4 py-2 lg:min-w-28 text-xs lg:text-base text-white font-semibold"
         >
           {isFullScreen ? "Full Screen" : "Full Screen"}
         </button>
