@@ -31,7 +31,7 @@ const Blog = () => {
 
   return (
     <div className="w-full">
-      <div className="px-4 md:px-28 py-8 md:py-16 space-y-8 lg:space-y-16 w-full">
+      <div className="container px-4 lg:px-20 flex flex-col justify-center items-center gap-8 lg:gap-16">
         <FeaturePost data={data[0]} />
         <AllPost data={data} />
       </div>
@@ -98,7 +98,7 @@ const FeaturePost = ({ data }) => {
 const AllPost = ({ data }) => {
   return (
     <div className="flex flex-col justify-center items-center w-full gap-8 lg:gap-12">
-      <section className="bg-red-600/20 backdrop-blur-lg py-2 md:py-3 px-2 rounded-md w-full">
+      <section className="bg-red-600/20 backdrop-blur-lg py-2 lg:py-3 px-2 rounded-md w-full">
         <div className="flex justify-center items-center w-full">
           <p className="text-2xl lg:text-3xl font-semibold">ALL BLOGS</p>
         </div>

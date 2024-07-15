@@ -4,6 +4,9 @@ const VideoSection = () => {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(0.4);
+  const [isFullScreen, setIsFullScreen] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
 
   const handlePlayPause = () => {
     if (videoRef.current) {
@@ -24,8 +27,24 @@ const VideoSection = () => {
     setVolume(volume);
   };
 
+  const handleFullScreenToggle = () => {
+    if (!document.fullscreenElement) {
+      videoRef.current?.requestFullscreen();
+    } else {
+      document.exitFullscreen();
+    }
+    setIsFullScreen(!isFullScreen);
+  };
+
   const handleVideoEnd = () => {
     setIsPlaying(false);
+  };
+
+  const handleTimeUpdate = () => {
+    if (videoRef.current) {
+      setCurrentTime(videoRef.current.currentTime);
+      setDuration(videoRef.current.duration);
+    }
   };
 
   return (
@@ -47,6 +66,7 @@ const VideoSection = () => {
               ref={videoRef}
               className="w-full h-full object-cover rounded-t"
               onEnded={handleVideoEnd}
+              onTimeUpdate={handleTimeUpdate}
             >
               <source src="./assets/video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
@@ -56,6 +76,10 @@ const VideoSection = () => {
               onPlayPause={handlePlayPause}
               volume={volume}
               onVolumeChange={handleVolumeChange}
+              onFullScreenToggle={handleFullScreenToggle}
+              isFullScreen={isFullScreen}
+              currentTime={currentTime}
+              duration={duration}
             />
             <ProgressBar videoRef={videoRef} />
           </div>
@@ -67,24 +91,57 @@ const VideoSection = () => {
 
 export default VideoSection;
 
-const Controls = ({ isPlaying, onPlayPause, volume, onVolumeChange }) => {
+const Controls = ({
+  isPlaying,
+  onPlayPause,
+  volume,
+  onVolumeChange,
+  onFullScreenToggle,
+  isFullScreen,
+  currentTime,
+  duration,
+}) => {
+  const formatTime = (time) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+  };
+
   return (
-    <div className="flex justify-center items-center gap-4 absolute bottom-4 left-1/2 transform -translate-x-1/2 mb-2">
-      <button
-        onClick={onPlayPause}
-        className="bg-gradient-to-l from-pink-600 to-pink-900 rounded-full px-6 py-2 text-white font-semibold"
-      >
-        {isPlaying ? "Pause" : "Play"}
-      </button>
-      <input
-        type="range"
-        min="0"
-        max="1"
-        step="0.01"
-        value={volume}
-        onChange={onVolumeChange}
-        className="bg-gray-500 rounded-full"
-      />
+    <div className="flex flex-col items-center gap-4 absolute bottom-4 left-1/2 transform -translate-x-1/2 mb-2 w-full">
+      <div className="relative flex justify-center items-center gap-2 lg:gap-4 w-full">
+        <button
+          onClick={onPlayPause}
+          className="bg-gradient-to-l from-pink-600 to-pink-900 rounded-full px-6 py-2 lg:min-w-28 text-xs lg:text-base text-white font-semibold"
+        >
+          {isPlaying ? "Pause" : "Play"}
+        </button>
+
+        <div className="flex justify-center items-center gap-2 bg-gradient-to-l from-pink-600 to-pink-900 rounded-full px-4 py-2 lg:min-w-28 text-xs lg:text-base text-white ">
+          <span>{formatTime(currentTime)}</span>
+          <span>/</span>
+          <span>{formatTime(duration)}</span>
+        </div>
+
+        <button
+          onClick={onFullScreenToggle}
+          className="bg-gradient-to-l from-pink-600 to-pink-900 rounded-full px-4 py-2 lg:min-w-28 text-xs lg:text-base text-white font-semibold"
+        >
+          {isFullScreen ? "Full Screen" : "Full Screen"}
+        </button>
+      </div>
+      <div className="absolute bottom-20 lg:bottom-0 right-2 lg:right-4">
+        <input
+          type="range"
+          min="0"
+          max="1"
+          step="0.01"
+          orient="vertical"
+          value={volume}
+          onChange={onVolumeChange}
+          className="bg-gray-500 rounded-full"
+        />
+      </div>
     </div>
   );
 };

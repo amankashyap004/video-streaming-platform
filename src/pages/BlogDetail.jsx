@@ -25,16 +25,8 @@ const BlogDetailPage = () => {
     fetchData();
   }, [slug]);
 
-  if (!blog) {
-    return (
-      <div className="flex justify-center items-center w-full h-screen">
-        <h1>Blog not found</h1>
-      </div>
-    );
-  }
-
   return (
-    <div className="px-4 md:px-28 py-8 md:py-12">
+    <div className="container px-4 lg:px-20 flex justify-center items-center">
       {blog?.slug ? (
         <div className="flex flex-col justify-start items-start gap-4 lg:gap-8">
           <div className="flex justify-center items-center gap-2 font-semibold">
@@ -56,16 +48,6 @@ const BlogDetailPage = () => {
                 <span className="text-sm">{blog?.date}</span>
               </p>
             </div>
-
-            <div className="w-full h-60 md:h-80 rounded">
-              <img
-                // src={blog?.image}
-                src={"./public/assets/image-1.jpg"}
-                alt="image"
-                className="object-cover w-full h-60 md:h-80 rounded"
-              />
-            </div>
-
             <div className="space-y-2">
               <p>{blog?.dissertation}</p>
               <div className="space-y-2">
@@ -79,14 +61,14 @@ const BlogDetailPage = () => {
           </section>
         </div>
       ) : (
-        <section className="flex justify-center items-center w-full h-48">
+        <section className="flex justify-center items-center w-full h-[80dvh]">
           <div className="flex flex-col justify-center items-center w-full gap-2 p-4">
             <p className="text-2xl font-bold text-center">
               Oops! Blog not found.
             </p>
             <div className="flex flex-col justify-center items-center w-full text-center text-lg">
               <p className="">Check out our blog collection.</p>
-              <Link href="/blog" className="text-blue-600 underline font-bold">
+              <Link to="/blog" className="text-pink-500 underline font-bold">
                 Here
               </Link>
             </div>
